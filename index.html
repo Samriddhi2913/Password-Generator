@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Sidebar -->
   <div class="sidebar">
     <h2>Menu</h2>
     <button onclick="alert('Saved passwords coming soon!')">Password Available</button>
   </div>
 
+  <!-- Main Content -->
   <div class="main">
     <div class="password-box">
       <input type="text" id="password" readonly placeholder="Your Password" />
@@ -19,6 +21,10 @@
       <button class="generate" onclick="generatePassword()">Generate</button>
       <button class="copy" onclick="copyPassword()">Copy</button>
       <button class="save" onclick="savePassword()">Save</button>
+      <hr style="margin: 20px 0; border: 0.5px solid #ccc; width: 80%;">
+      <input type="text" id="manualPassword" placeholder="Enter your password here" />
+      <br />
+      <button class="add" onclick="addPassword()">Add Password</button>
     </div>
   </div>
 
