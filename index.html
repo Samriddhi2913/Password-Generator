@@ -3,43 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Password Manager</title>
+  <title>✨ Password Manager</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
-    <h2>Menu</h2>
-    <button onclick="alert('Saved passwords coming soon!')">Password Available</button>
+    <h2>🔐 Menu</h2>
+    <button onclick="alert('Saved passwords feature coming soon!')">Password Available</button>
   </div>
 
   <!-- Main Content -->
   <div class="main">
     <div class="password-box">
-      <!-- Masked Password Display -->
+      <h1>Password Manager</h1>
+
+      <!-- Password Field -->
       <input type="password" id="password" readonly placeholder="Your Password" />
       <br />
-      <label style="font-size: 14px;">
+      <label class="show-toggle">
         <input type="checkbox" id="showPass" onclick="toggleVisibility()"> Show Password
       </label>
-      <br /><br />
 
       <!-- Action Buttons -->
-      <button class="generate" onclick="generatePassword()">Generate</button>
-      <button class="copy" onclick="copyPassword()">Copy</button>
-      <button class="save" onclick="savePassword()">Save</button>
+      <div class="button-group">
+        <button class="generate" onclick="generatePassword()">🔁 Generate</button>
+        <button class="copy" onclick="copyPassword()">📋 Copy</button>
+        <button class="save" onclick="savePassword()">💾 Save</button>
+      </div>
 
-      <!-- Divider -->
-      <hr style="margin: 20px 0; border: 0.5px solid #ccc; width: 80%;">
+      <hr />
 
       <!-- Manual Entry -->
-      <input type="text" id="manualPassword" placeholder="Enter your password here" />
-      <br />
-      <button class="add" onclick="addPassword()">Add Password</button>
+      <input type="text" id="manualPassword" placeholder="Enter password manually..." />
+      <button class="add" onclick="addPassword()">➕ Add Password</button>
     </div>
   </div>
 
-  <!-- JavaScript Logic -->
   <script src="script.js"></script>
 </body>
 </html>
