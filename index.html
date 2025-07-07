@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <button onclick="alert('Saved passwords coming soon!')">Password Available</button>
+  </div>
+
+  <div class="main">
+    <div class="password-box">
+      <input type="text" id="password" readonly placeholder="Your Password" />
+      <br />
+      <button class="generate" onclick="generatePassword()">Generate</button>
+      <button class="copy" onclick="copyPassword()">Copy</button>
+      <button class="save" onclick="savePassword()">Save</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
