@@ -16,7 +16,11 @@
   <!-- Main Content -->
   <div class="main">
     <div class="password-box">
-      <input type="text" id="password" readonly placeholder="Your Password" />
+      <input type="password" id="password" readonly placeholder="Your Password" />
+<label style="font-size: 14px;">
+  <input type="checkbox" id="showPass" onclick="toggleVisibility()"> Show Password
+</label>
+
       <br />
       <button class="generate" onclick="generatePassword()">Generate</button>
       <button class="copy" onclick="copyPassword()">Copy</button>

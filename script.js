@@ -32,3 +32,10 @@ function addPassword() {
   document.getElementById("password").value = manualInput;
   alert("Password added successfully!");
 }
+function toggleVisibility() {
+  const passwordField = document.getElementById("password");
+  const checkbox = document.getElementById("showPass");
+
+  passwordField.type = checkbox.checked ? "text" : "password";
+}
+
