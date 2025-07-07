@@ -16,22 +16,30 @@
   <!-- Main Content -->
   <div class="main">
     <div class="password-box">
+      <!-- Masked Password Display -->
       <input type="password" id="password" readonly placeholder="Your Password" />
-<label style="font-size: 14px;">
-  <input type="checkbox" id="showPass" onclick="toggleVisibility()"> Show Password
-</label>
-
       <br />
+      <label style="font-size: 14px;">
+        <input type="checkbox" id="showPass" onclick="toggleVisibility()"> Show Password
+      </label>
+      <br /><br />
+
+      <!-- Action Buttons -->
       <button class="generate" onclick="generatePassword()">Generate</button>
       <button class="copy" onclick="copyPassword()">Copy</button>
       <button class="save" onclick="savePassword()">Save</button>
+
+      <!-- Divider -->
       <hr style="margin: 20px 0; border: 0.5px solid #ccc; width: 80%;">
+
+      <!-- Manual Entry -->
       <input type="text" id="manualPassword" placeholder="Enter your password here" />
       <br />
       <button class="add" onclick="addPassword()">Add Password</button>
     </div>
   </div>
 
+  <!-- JavaScript Logic -->
   <script src="script.js"></script>
 </body>
 </html>
