@@ -23,3 +23,12 @@ function savePassword() {
   console.log("Password saved:", password); // You can expand this to save elsewhere
   alert("Password saved!");
 }
+function addPassword() {
+  const manualInput = document.getElementById("manualPassword").value.trim();
+  if (manualInput === "") {
+    alert("Please enter a password to add.");
+    return;
+  }
+  document.getElementById("password").value = manualInput;
+  alert("Password added successfully!");
+}
