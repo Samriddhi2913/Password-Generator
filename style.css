@@ -63,6 +63,24 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.password-box .add {
+  background-color: #8e44ad;
+  color: white;
+  margin-top: 10px;
+}
+
+.password-box input#manualPassword {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.password-box input#manualPassword:focus {
+  border-color: #6a0dad;
+  outline: none;
+}
 
 .generate { background-color: #28a745; color: white; }
 .copy     { background-color: #007bff; color: white; }
