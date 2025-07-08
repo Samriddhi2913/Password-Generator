@@ -1,18 +1,15 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   height: 100vh;
-  background-color: #f2f2f2;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
 }
 
-/* Sidebar */
 .sidebar {
   width: 220px;
   background-color: #4B0082;
   color: white;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
 }
 
@@ -29,6 +26,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 .main {
@@ -44,44 +42,64 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   text-align: center;
+  width: 100%;
+  max-width: 480px;
 }
 
 .password-box input {
-  width: 300px;
+  width: 100%;
   padding: 10px;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .password-box button {
-  margin: 5px;
+  margin: 6px;
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
 }
-.password-box .add {
-  background-color: #8e44ad;
-  color: white;
-  margin-top: 10px;
+
+.show-toggle {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
 }
 
-.password-box input#manualPassword {
-  width: 300px;
-  padding: 10px;
-  font-size: 16px;
-  margin-top: 10px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-}
-.password-box input#manualPassword:focus {
-  border-color: #6a0dad;
-  outline: none;
+.button-group button.generate { background-color: #28a745; color: white; }
+.button-group button.copy     { background-color: #007bff; color: white; }
+.button-group button.save     { background-color: #ffc107; color: black; }
+.password-box .add           { background-color: #8e44ad; color: white; }
+
+.options {
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.generate { background-color: #28a745; color: white; }
-.copy     { background-color: #007bff; color: white; }
-.save     { background-color: #ffc107; color: black; }
+.options label {
+  display: block;
+  margin: 5px 0;
+}
+
+#strengthBar {
+  height: 10px;
+  width: 100%;
+  background: #eee;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+#confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
