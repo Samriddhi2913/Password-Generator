@@ -1,11 +1,13 @@
+/* GENERAL STYLES */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   display: flex;
   height: 100vh;
-  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  background: linear-gradient(to right, #c471ed, #f64f59);
 }
 
+/* SIDEBAR */
 .sidebar {
   width: 220px;
   background-color: #4B0082;
@@ -29,32 +31,87 @@ body {
   margin-top: 10px;
 }
 
+/* MAIN PANEL */
 .main {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
+/* GLASSMORPHIC PASSWORD BOX */
 .password-box {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
   text-align: center;
-  width: 100%;
+  width: 90%;
   max-width: 480px;
+  animation: fadeIn 0.8s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
+.password-box::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+  transform: rotate(10deg);
+  z-index: 0;
+}
+
+.password-box * {
+  position: relative;
+  z-index: 1;
+}
+
+.password-box:hover {
+  box-shadow: 0 12px 50px rgba(0,0,0,0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADINGS */
+.password-box h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4B0082;
+  text-shadow: 1px 1px 1px #ffffffa6;
+}
+
+/* INPUTS */
 .password-box input {
   width: 100%;
   padding: 10px;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  color: #333;
 }
 
+.password-box input:focus {
+  outline: none;
+  border-color: #4B0082;
+}
+
+/* BUTTONS */
 .password-box button {
   margin: 6px;
   padding: 10px 20px;
@@ -62,19 +119,31 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-}
-
-.show-toggle {
-  font-size: 14px;
-  display: block;
-  margin-bottom: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button-group button.generate { background-color: #28a745; color: white; }
 .button-group button.copy     { background-color: #007bff; color: white; }
 .button-group button.save     { background-color: #ffc107; color: black; }
-.password-box .add           { background-color: #8e44ad; color: white; }
+.password-box .add            { background-color: #8e44ad; color: white; }
 
+.button-group button:hover,
+.password-box .add:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* STRENGTH BAR */
+#strengthBar {
+  height: 10px;
+  width: 100%;
+  background: #eee;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+/* OPTIONS */
 .options {
   text-align: left;
   font-size: 14px;
@@ -86,15 +155,7 @@ body {
   margin: 5px 0;
 }
 
-#strengthBar {
-  height: 10px;
-  width: 100%;
-  background: #eee;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  transition: 0.3s ease;
-}
-
+/* CONFETTI CANVAS */
 #confetti-canvas {
   position: fixed;
   pointer-events: none;
