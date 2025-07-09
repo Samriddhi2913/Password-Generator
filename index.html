@@ -8,15 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Sidebar -->
   <div class="sidebar">
     <h2>🔐 Menu</h2>
     <button onclick="alert('Saved passwords vault coming soon!')">Password Vault</button>
   </div>
 
+  <!-- Main Content -->
   <div class="main">
     <div class="password-box">
       <h1>Password Manager</h1>
 
+      <!-- Password Field -->
       <input type="password" id="password" readonly placeholder="Your Password" />
       <label class="show-toggle">
         <input type="checkbox" id="showPass" onclick="toggleVisibility()"> Show Password
@@ -29,12 +32,13 @@
       <div class="options">
         <label>Length: <span id="lengthValue">12</span></label>
         <input type="range" min="6" max="24" value="12" id="lengthSlider" oninput="updateLength()" />
-        
+
         <label><input type="checkbox" id="includeUpper" checked> Include Uppercase</label>
         <label><input type="checkbox" id="includeNumbers" checked> Include Numbers</label>
         <label><input type="checkbox" id="includeSymbols" checked> Include Symbols</label>
       </div>
 
+      <!-- Action Buttons -->
       <div class="button-group">
         <button class="generate" onclick="generatePassword()">🔁 Generate Again</button>
         <button class="copy" onclick="copyPassword()">📋 Copy</button>
@@ -43,6 +47,7 @@
 
       <hr />
 
+      <!-- Manual Entry -->
       <input type="text" id="manualPassword" placeholder="Enter password manually..." />
       <button class="add" onclick="addPassword()">➕ Add Password</button>
 
